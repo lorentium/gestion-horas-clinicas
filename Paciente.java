@@ -1,10 +1,16 @@
-public class Paciente {
+public class Paciente extends Persona {
     String nombre;
     String rut;
     int edad;
     int telefono;
 
-    
+    public Paciente(String nombre, String rut, int edad, int telefono) {
+        this.nombre = nombre;
+        this.rut = rut;
+        this.edad = edad;
+        this.telefono = telefono;
+    }
+
     public String getNombre() {
         return nombre;
     }
