@@ -28,7 +28,4 @@ public class CitaClinica {
                 '}';
     }
 
-    public String getRutPaciente() {
-        return paciente.getRut();
-    }
 }
