@@ -13,6 +13,10 @@ public class CitaClinica {
         this.motivo = motivo;
     }
 
+    public String getRutPaciente() {
+        return paciente.getRut();
+    }
+
     @Override
     public String toString() {
         return "CitaClinica{" +
