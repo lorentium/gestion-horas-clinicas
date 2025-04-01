@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 class SistemaClinico {
     private List<Profesional> profesionales = new ArrayList<>();
@@ -41,5 +42,41 @@ class SistemaClinico {
     public void eliminarCita(String rutPaciente) {
         citas.removeIf(cita -> cita.getRutPaciente().equals(rutPaciente));
         System.out.println("Cita eliminada con éxito.");
+    }
+
+    public void modificarProfesional(String rut, Scanner scanner) {
+        for (Profesional p : profesionales) {
+            if (p.getRut().equals(rut)) {
+                System.out.print("Nuevo nombre: ");
+                p.setNombre(scanner.nextLine());
+                System.out.print("Nueva especialización: ");
+                p.setEspecializacion(scanner.nextLine());
+                System.out.print("Nueva edad: ");
+                p.setEdad(scanner.nextInt());
+                System.out.print("Nuevo teléfono: ");
+                p.setTelefono(scanner.nextInt());
+                scanner.nextLine();
+                System.out.println("Profesional actualizado con éxito.");
+                return;
+            }
+        }
+        System.out.println("Profesional no encontrado.");
+    }
+
+    public void modificarPaciente(String rut, Scanner scanner) {
+        for (Paciente p : pacientes) {
+            if (p.getRut().equals(rut)) {
+                System.out.print("Nuevo nombre: ");
+                p.setNombre(scanner.nextLine());
+                System.out.print("Nueva edad: ");
+                p.setEdad(scanner.nextInt());
+                System.out.print("Nuevo teléfono: ");
+                p.setTelefono(scanner.nextInt());
+                scanner.nextLine();
+                System.out.println("Paciente actualizado con éxito.");
+                return;
+            }
+        }
+        System.out.println("Paciente no encontrado.");
     }
 }
