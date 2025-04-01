@@ -1,16 +1,17 @@
 public class Profesional extends Persona {
-    String nombre;
-    String rut;
-    String especializacion;
-    int edad;
-    int telefono;
-
+    private String especializacion;
 
     public Profesional(String nombre, String rut, String especializacion, int edad, int telefono) {
-        this.nombre = nombre;
-        this.rut = rut;
+        super(nombre, rut, edad, telefono);
         this.especializacion = especializacion;
-        this.edad = edad;
-        this.telefono = telefono;
+    }
+
+    public String getEspecializacion() { return especializacion; }
+    public void setEspecializacion(String especializacion) { this.especializacion = especializacion; }
+
+    @Override
+    public String toString() {
+        return super.toString() + " - Especialidad: " + especializacion;
     }
 }
+
