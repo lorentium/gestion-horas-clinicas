@@ -29,7 +29,8 @@ public class Main {
                     System.out.print("Teléfono: ");
                     int telefonoP = leer.nextInt();
                     leer.nextLine();
-                    sistema.agregarProfesional(new Profesional(nombreP, rutP, especialidad, edadP, telefonoP));
+                    int experienciaP= leer.nextInt();
+                    sistema.agregarProfesional(new Profesional(nombreP, rutP, especialidad, edadP, telefonoP,experienciaP,true));
                     break;
                 case 2:
                     System.out.print("Nombre: ");
@@ -41,7 +42,8 @@ public class Main {
                     System.out.print("Teléfono: ");
                     int telefonoPac = leer.nextInt();
                     leer.nextLine();
-                    sistema.agregarPaciente(new Paciente(nombrePac, rutPac, edadPac, telefonoPac));
+                    String historialPac = leer.nextLine();
+                    sistema.agregarPaciente(new Paciente(nombrePac, rutPac, edadPac, telefonoPac,historialPac));
                     break;
                 case 3:
                     System.out.print("Ingrese el RUT del profesional a modificar: ");
