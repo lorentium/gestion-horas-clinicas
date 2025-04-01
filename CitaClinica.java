@@ -27,4 +27,8 @@ public class CitaClinica {
                 ", motivo='" + motivo + '\'' +
                 '}';
     }
+
+    public String getRutPaciente() {
+        return paciente.getRut();
+    }
 }
