@@ -5,6 +5,9 @@ public class Main {
         Clinica clinica = new Clinica("Clinica Alemana","Senador Estebanez 0101", 2123412);
         
         CitaClinica cita = new CitaClinica(profesional,paciente,clinica,"02 de abril", "sangre en la orina");
+        //System.out.println(cita);
+
     }
+
 }
 

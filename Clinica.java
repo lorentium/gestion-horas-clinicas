@@ -17,7 +17,7 @@ public class Clinica {
         return direccion;
     }
 
-    public String getTelefono() {
+    public int getTelefono() {
         return telefono;
     }
 
