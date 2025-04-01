@@ -13,19 +13,29 @@ public class CitaClinica {
         this.motivo = motivo;
     }
 
+    public Profesional getProfesional() {
+        return profesional;
+    }
+
+    public String getFecha() {
+        return fecha;
+    }
+
     public String getRutPaciente() {
         return paciente.getRut();
     }
 
-    @Override
-    public String toString() {
-        return "CitaClinica{" +
-                "profesional=" + profesional +
-                ", paciente=" + paciente +
-                ", clinica=" + clinica +
-                ", fecha='" + fecha + '\'' +
-                ", motivo='" + motivo + '\'' +
-                '}';
+    public String getMotivo() {
+        return motivo;
     }
 
+    @Override
+    public String toString() {
+        return "Cita: "
+                + fecha + " - "
+                + motivo + "\n  Médico: "
+                + profesional.getNombre() + "\n  Paciente: "
+                + paciente.getNombre();
+    }
 }
+
