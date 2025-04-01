@@ -1,9 +1,13 @@
 public class Profesional extends Persona {
     private String especializacion;
+    private int experiencia;
+    private boolean disponible;
 
-    public Profesional(String nombre, String rut, String especializacion, int edad, int telefono) {
+    public Profesional(String nombre, String rut, String especializacion, int edad, int telefono, int experiencia, boolean disponible) {
         super(nombre, rut, edad, telefono);
         this.especializacion = especializacion;
+        this.experiencia = experiencia;
+        this.disponible = disponible;
     }
 
     public String getEspecializacion() { return especializacion; }
@@ -11,7 +15,7 @@ public class Profesional extends Persona {
 
     @Override
     public String toString() {
-        return super.toString() + " - Especialidad: " + especializacion;
+        return super.toString() + ", especializacion: " + especializacion + ", experiencia: " + experiencia + " años, disponible: " + disponible;
     }
 }
 

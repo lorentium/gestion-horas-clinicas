@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+
         Scanner leer = new Scanner(System.in);
         SistemaClinico sistema = new SistemaClinico("Clinica Alemana","Senador Estébanez 645",452201201);
 
